@@ -1,6 +1,6 @@
 # Git Chef
 
-`git chef` is a helpful, searchable collection of common `git` questions, incorporated right into your existing `git` workflow.
+`git chef` is a helpful, searchable collection of answers to common `git` questions, incorporated right into your existing `git` workflow.
 
 To use `git chef`, simply feed it a description of what you want to do. For example:
 ```bash
@@ -16,7 +16,7 @@ git chef 'reword last commit message'
 If more than one recipe is found that matches your description, you will be prompted to choose from the matching recipes.
 
 ## Cookbooks
-`git chef` comes with a set of recipes all contained in the master 'cookbook'. These recipes are indexed and searched by description when you need help executing a `git` command.
+`git chef` comes with a set of base recipes all contained in the master cookbook. These recipes are indexed and searched by their description when you need help executing a `git` command.
 
 You can also add your own cookbooks with your own commands, or replace the master cookbook recipes with your own.
 
@@ -54,7 +54,12 @@ And a more complicated example for squashing the last N commits might look like 
 > # 3) Save and edit commit message
 
 ! If already pushed, push changes with:
-! git push origin +master
+!   git push <remote> +<branch>
+! ex:
+!   git push origin +master
 
 @ squash, n, rebase
 ```
+
+## Contributing
+Want to contribute a recipe or a cookbook? Great! Just fork this repo, add your changes and submit a pull request.
