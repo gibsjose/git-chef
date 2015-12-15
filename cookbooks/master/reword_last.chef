@@ -1,0 +1,5 @@
+# reword last commit message
+
+> git commit --amend -m '<new message>'
+
+@ reword, commit, amend, last commit
