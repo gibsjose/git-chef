@@ -14,8 +14,9 @@ or
 git chef 'reword last commit message'
 ```
 
-`git chef` will then find a matching recipe and tell you which `git` commands you will need to do what you need to do!
+`git chef` will then find a matching recipe and tell you which `git` commands you will need!
 
+## Searching
 You can use natural language when searching for a matching recipe, like this:
 ```bash
 git chef 'squash last 2 commits'
