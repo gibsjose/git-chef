@@ -1,0 +1,7 @@
+# add remote repository
+
+> git remote add <remote> <url>
+~ git remote add origin git@github.com:user/repository.git
+
+! SSH (and a valid key pair associated with the repository owner) are required to push to the remote. However, you may also use the HTTPS url of the repository, which looks something like:
+!   https://github.com/user/repository.git

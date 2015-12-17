@@ -55,12 +55,13 @@ You can also add your own cookbooks or edit/replace the master cookbook recipes 
 ## Recipes
 Recipes are simply a `<recipe_name>.chef` file that lives in your cookbook directory. You can name a new recipe whatever you want, as long as it is not already taken within the same cookbook.
 
-The recipes follow a simple format with five types of instructions:
+The recipes follow a simple format with six types of instructions:
 
 ```bash
-# description       # (required)
+# description       # (REQUIRED)
 
-> commands          # (required)
+> commands          # (REQUIRED)
+~ examples          # (optional)
 * comments          # (optional)
 
 ! caveats           # (optional)
@@ -85,7 +86,7 @@ You can have as many description lines as you would like, but only the first lin
 > Descriptions are prefixed with a `#` character.
 
 ### Commands
-Many `git` actions are solved by a single command. For example, to create a new branch from the current one:
+Many `git` actions are solved by a single command. For example, to create a new branch from the current one, use the syntax:
 ```bash
 > git checkout -b <new_branch>
 ```
@@ -96,11 +97,23 @@ However, this could also be written more verbosely as two commands:
 > git checkout -b <new_branch>
 ```
 
+The `>` character denotes the *syntax* of a command, while the `~` character is an example of the command. Command examples are often helpful, but are completely optional. A command may have as many examples as desired. Examples are considered to be associated with the command most-directly above them.
+
+So the previous example could be expanded with example commands like this:
+```bash
+> git checkout <existing_branch>
+~ git checkout master
+> git checkout -b <new_branch>
+~ git checkout -b develop
+```
+
 You may also add extra information to the commands by adding a comment beneath the command, prefixed by `*`:
 ```
 > git checkout <existing_branch>
+~ git checkout master
 * Skip if you are already on the desired existing branch
 > git checkout -b <new_branch>
+~ git checkout -b develop
 * Will create a new branch called <new_branch> from <existing_branch>
 ```
 
@@ -118,9 +131,13 @@ Or when a branch name is required as part of the command:
 > git branch -d <branch>
 ```
 
+In these cases, adding an example command can be very helpful. The syntax-example-comment (`>` - `~` - `*`) flow is a great way of defining a command clearly, although you may describe the command any way you would like, as long as the **syntax** element is present.
+
 In the event the `git` action requires multiple commands, the commands (and optional comments) should be listed in the order they are meant to be executed in. Non-command actions (e.g. 'modify the commit message') should be listed as a series of comments.
 
 > Commands are prefixed with a `>` character.
+
+> Examples are prefixed with a `~` character.
 
 > Comments are prefixed with a `*` character.
 

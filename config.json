@@ -1,0 +1,18 @@
+{
+    "authors": [
+        {
+            "email": "gibsjosej@gmail.com",
+            "name": "Joe Gibson"
+        }
+    ],
+    "git": false,
+    "git-push": false,
+    "git-remote": "",
+    "language": "python",
+    "license": "MIT",
+    "license-url": "https://gibsjose.mit-license.org",
+    "project": "git-chef",
+    "websites": [
+        "https://gibsjose.com"
+    ]
+}
