@@ -1,0 +1,12 @@
+# remove local or remote branch
+
+> git branch -d <branch>
+~ git branch -d some-branch
+* Deletes the branch locally
+> git push <remote> --delete <branch>
+~ git push origin --delete some-branch
+* Deletes the branch remotely
+
+! You may need to use `-D` instead of `-d` in some cases to delete the local branch
+
+@ remove, delete, local, remote, branch

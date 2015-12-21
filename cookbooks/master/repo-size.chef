@@ -1,0 +1,8 @@
+# get repository size
+
+> git gc
+* Cleans up and optimizes local repository
+> git count objects -vH
+* The `size-pack` element shows the size of the packed objects (the repo size)
+
+@ repository, size, packed, objects
