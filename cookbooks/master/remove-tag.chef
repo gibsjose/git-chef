@@ -1,0 +1,11 @@
+# remove local or remote tag
+
+> git tag -d <tag>
+~ git tag -d 1.0.0
+* Deletes the tag locally
+
+> git push origin :refs/tags/<tag>
+~ git push origin :refs/tags/1.0.0
+* Deletes the tag remotely
+
+@ remove, delete, local, remote, tag
